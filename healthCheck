@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+echo "HealthCheck"
+echo""
+
+while true;do
+	echo "Date And Time:"
+	date
+	echo ""
+	echo "Uptime of the machine:"
+	uptime
+	echo ""
+	echo "Disk Usage"
+	df
+	echo "Memory Usage"
+	free --giga
+	echo ""
+	sleep 2
+done

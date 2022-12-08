@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+echo "Cerinta 1"
+echo "" 
+cat ip.txt | awk '{print $1}' | sort | uniq | wc -l
+echo "" 
+
+echo "Cerinta 2"
+cat ip.txt | awk '{print $3}' | sort | uniq -c | wc -l
+echo ""
+
+echo "Cerinta 3"
+cat ip.txt | awk '{print $3}' | sort | uniq -c
+echo "" 
+
+echo "Cerinta 4"
+
+cat ip.txt | awk '{print $1}' | sort | uniq -c
+echo "" 
+
+echo "Cerinta 5"
+echo ""
+echo "Most Successes"
+cat ip.txt | grep 200 | awk '{print $1}' | sort | uniq -c | sort -r | head -1
+
+echo""
+echo "Most Failures"
+cat ip.txt | grep -v 200 | awk '{print $1}' | sort | uniq -c | sort -r | head -1
