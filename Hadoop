@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+echo "INFO NUMBER:" 
+infos=$(cat hadoop.log | grep INFO |  wc -l)
+echo $infos
+echo ""
+echo "WARN NUMBER:"
+warns=$(cat hadoop.log | grep WARN | wc -l)
+echo $warns
+echo ""
+echo "ERROR NUMBER:"
+errors=$(cat hadoop.log | grep ERROR | wc -l)
+echo $errors
+echo ""
+total=$(cat hadoop.log | wc -l)
+echo "Total INFO WARN ERROR"
+echo $total 
+
